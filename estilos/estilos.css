@@ -14,6 +14,13 @@ h2{
     line-height: clamp(1.25rem, 0.971rem + 1.176vw, 2rem);
 }
 
+footer{
+    text-align: center;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+}
+
 #header{
     background-color: #1e1e1e;
     padding: 20px;
@@ -84,6 +91,7 @@ h2{
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 #productos-destacados h2 {
@@ -97,9 +105,19 @@ h2{
     width: 200px; 
 }
 
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 40px;
+}
+
 
 .caja-producto img {
     width: 100%;      
     height: 150px;     
     object-fit: cover; 
 }
+
+
