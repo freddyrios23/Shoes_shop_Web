@@ -72,6 +72,7 @@ footer{
 }
 
 
+
 #contacto div:first-child img{
     width: 300px;
     border-radius: 20px;
@@ -87,6 +88,7 @@ footer{
     width: 50px;
 }
 
+/* Pone las tarjetas una al lado de la otra */
 #contener-productos {
     display: flex;
     justify-content: center;
@@ -94,30 +96,16 @@ footer{
     flex-wrap: wrap;
 }
 
-#productos-destacados h2 {
-    text-align: center;
-}
-
+/* La tarjeta del producto */
 .caja-producto {
     border: 1px solid #ccc;
     padding: 15px;
     text-align: center;
-    width: 200px; 
+    width: 200px; /* Ancho de cada tarjeta */
 }
-
-#login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 40px;
-}
-
 
 .caja-producto img {
-    width: 100%;      
-    height: 150px;     
-    object-fit: cover; 
+    width: 100%;       /* Para que no se salga de la tarjeta */
+    height: 150px;     /* Altura fija para que todas midan lo mismo */
+    object-fit: cover; /* Evita que la foto se deforme */
 }
-
-
