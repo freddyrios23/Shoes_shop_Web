@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-    <header id ="header">
-        <h1 class="title">SHOES SHOP</h1>
+    <header id="header">
+        <h1 class="title is-1">SHOES SHOP</h1>
         <nav>
             <ul class="is-flex">
                 <li><a class="button" href="index.html">Inicio</a></li>
                 <li><a class="button" href="/OtrasPag/productos.html">Productos</a></li>
                 <li><a class="button" href="/OtrasPag/carrito.html">Carrito</a></li>
                 <li><a class="button" href="/OtrasPag/login.html">Login</a></li>
+                <li><a class="button" href="/OtrasPag/signIn.html">Sing in</a></li>
             </ul>
         </nav>
     </header>
-    <section id="content">
+    <section class="section" id="content">
         <article id="inicio">
-            <h2>
+            <h2 class="subtitle is-3">
                 La mejor calidad al mejor precio tu sabes
             </h2>
         </article>
-        <article id="nosotros">
-            <h2>
+        <article id="nosotros" class="box container">
+            <h2 class="title is-4">
                 Sobre Nosotros
             </h2>
             <p>
@@ -34,45 +35,77 @@
             </p>
         </article>
         <section id="productos-destacados">
-            <h2>Productos Destacados</h2>
-            <div id="contener-productos">
-                <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TeoFheP4BGfyLSSe1ZDVhHRqFVjkvhZdLv0Xq0-rEQ&s=10" alt="Adidas">
-                    <h3>Zapatillas adidas superstar</h3>
-                    <p>$79.000</p>
-                    <button onclick="agregarAlCarrito(1)" class="button is-primary">Comprar</button>
+            <h2 class="title">Productos Destacados</h2>
+            <div class="container columns" id="contener-productos">
+                <div class="column">
+                    <div class="card">                      
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TeoFheP4BGfyLSSe1ZDVhHRqFVjkvhZdLv0Xq0-rEQ&s=10" alt="Adidas">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title">Zapatillas adidas superstar</h3>
+                            <p class="subtitle">$79.000</p>
+                        </div>
+                        <div class="card-footer">
+                            <button onclick="agregarAlCarrito(1)" class="button is-primary is-fullwidth">Comprar</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMpQvM-y-Y0QuJ_7c4rkuydoJJskdULLsOb54RppDvQ&s=10" alt="Nike">
-                    <h3>Zapatillas Nike air max plus</h3>
-                    <p>$80.000</p>
-                    <button class="button is-primary" onclick="agregarAlCarrito(2)">Comprar</button>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMpQvM-y-Y0QuJ_7c4rkuydoJJskdULLsOb54RppDvQ&s=10" alt="Nike">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title">Zapatillas Nike air max plus</h3>
+                            <p class="subtitle">$80.000</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="button is-primary is-fullwidth" onclick="agregarAlCarrito(2)">Comprar</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdKGUozDyIZcmJYHySbA__N4PZWRR_s3rG7kLI0AYHw&s=10" alt="Reebok">
-                    <h3>Zapatillas reebok classic</h3>
-                    <p>$50.000</p>
-                    <button class="button is-primary" onclick="agregarAlCarrito(3)">Comprar</button>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdKGUozDyIZcmJYHySbA__N4PZWRR_s3rG7kLI0AYHw&s=10" alt="Reebok">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title">Zapatillas reebok classic</h3>
+                            <p class="subtitle">$50.000</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="button is-primary is-fullwidth" onclick="agregarAlCarrito(3)">Comprar</button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </section>
     </section>
     <article id="contacto">
         <div>
-            <img src="https://scontent-scl3-1.cdninstagram.com/v/t51.82787-19/786453729_18119746490486295_1566345932816138439_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=103&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=X7HgIo--McEQ7kNvwE_GJ9-&_nc_oc=Adrcz5-ImnKf55pD5SXZz4bILpsbyQLLEyBFpXWTQXnpOB1Y6fLXsvImNrIbdAf0-aU&_nc_zt=24&_nc_ht=scontent-scl3-1.cdninstagram.com&_nc_gid=mO2wqaiKCu8biBQ5tDaxpw&_nc_ss=7ba8c&oh=00_AQIHF4Bh__dqAqBKYFzSsFHNDy_PG3DiAfOxDOqhmYAkhA&oe=6A9E9CAB" alt="Logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxmsA_SRylEADmQ8GZ3z_BoAJhzMKPaOc5tIIkjK4NBg&s=10" alt="Logo" style="width: 80px; border-radius: 50%;">
         </div>
         <div>
-        <h2>Contacto</h2>
-            <a href="mailto:mati.jaramillo@duocuc.cl">Tienes dudas o consultas?</a>
-            <a href="tel:+5691234123456">col mi</a>
+            <h2 class="title">Contacto</h2>
+            <p><a href=mailto:mati.jaramillo@duocuc.cl">¿Tienes dudas o consultas?</a></p>
+            <p><a href="tel:+5691234123456">Llámanos aquí</a></p>
             <a href="https://media.istockphoto.com/id/1461385811/es/foto/zapatillas-multicolores-en-el-escaparate-de-la-zapater%C3%ADa.jpg?s=612x612&w=0&k=20&c=tDVPWTSY9ikYLlnORhQTPsKGHSW0nK7bacTHYOVcMfA=">
-                <img src="https://www.designenlassen.de/blog/wp-content/uploads/2024/02/Instagram_icon.png.webp">
+                <img src="https://www.designenlassen.de/blog/wp-content/uploads/2024/02/Instagram_icon.png.webp" style="width: 30px;" >
             </a>
         </div>
     </article>
-    <footer>
+    <footer class="has-text-centered">
         © 2026 Shoes Shop
     </footer>
+
+    <script src="/scripts/script.js"></script>
 </body>
-<script src="/scripts/script.js"></script>
 </html>
