@@ -55,17 +55,16 @@ let carrito = [];
 
 // Función para agregar al carrito y guardar en localStorage
 function agregarAlCarrito(idProducto) {
-    //Buscamos el zapato en el catálogo
+    //  Recuperamos lo que ya había guardado (o un arreglo vacío si es el primero)
+    let carritoGuardado = JSON.parse(localStorage.getItem("miCarrito")) || [];
+    // Buscamos el zapato
     const zapato = productos.find(producto => producto.id === idProducto);
+    //  Lo agregamos a la lista recuperada
+    carritoGuardado.push(zapato);
+    // Guardamos la lista actualizada en localStorage
+    localStorage.setItem("miCarrito", JSON.stringify(carritoGuardado));
 
-    //Lo metemos a la lista del carrito
-    carrito.push(zapato);
-
-    // Guardamos la lista en el navegador convirtiéndola a texto
-    localStorage.setItem("miCarrito", JSON.stringify(carrito));
-
-    console.log("¡Zapato agregado!", zapato);
-    console.log("Tu carrito completo ahora tiene: ", carrito);
+    alert("¡Producto agregado al carrito!");
 }
 
 function mostrarCarrito(){
@@ -224,7 +223,7 @@ if (logo) {
             // Guardamos que el usuario es admin en localStorage
             localStorage.setItem("esAdmin", "true");
             alert("¡Modo Administrador Activado!");
-            window.location.href = "/OtrasPag/ModoAdmin.html"; // Redirige a la vista admin
+            window.location.href = "OtrasPag/ModoAdmin.html"; // Redirige a la vista admin
         } else if (claveAdmin !== null) {
             alert("Clave incorrecta. Acceso denegado.");
         }
@@ -246,14 +245,19 @@ if (formularioLogin) {
         return;
     }
 
-    // Buscamos los datos guardados al registrarse
     let usuarioGuardado = localStorage.getItem("usuarioGuardado");
     let claveGuardada = localStorage.getItem("claveGuardada");
 
-    // Verificamos si coinciden con los datos guardados O con el admin por defecto
     if ((email === usuarioGuardado && password === claveGuardada) || (email === "admin@gmail.com" && password === "1234")) {
         alert("¡Inicio de sesión exitoso. Bienvenido!");
-        window.location.href = "../index.html";
+
+        // Si la página login.html está dentro de "OtrasPag", sube un nivel con "../index.html"
+        // Si no, redirige directamente a "index.html"
+        if (window.location.pathname.includes("OtrasPag")) {
+            window.location.href = "../index.html";
+        } else {
+            window.location.href = "index.html";
+        }
     } else {
         alert("Credenciales incorrectas o el usuario no existe.");
     }
