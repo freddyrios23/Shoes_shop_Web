@@ -3,86 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOES SHOP</title>
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <title>Productos - Shoes Shop</title>
+
+    <link rel="stylesheet" href="../estilos/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-
-    <header id="header" class="has-text-centered">
-        <h1 class="title">SHOES SHOP</h1>
+    <header id="header">
+        <h1 id="logo" class="title" style="cursor: pointer;">SHOES SHOP</h1>
         <nav>
-            <ul class="is-flex is-justify-content-center">
-                <li><a class="button" href="/OtrasPag/productosAdmin.html">Productos</a></li>
+            <ul class="is-flex">
+
+                <li><a class="button" href="ModoAdmin.html">Inicio</a></li>
+
+                <li><a class="button" href="../index.html">Salir Modo Admin</a></li>
             </ul>
         </nav>
     </header>
+    <section id="catalogo">
+        <h2>Administracion de Productos</h2>
 
-    <section class="section" id="content">
-        <article id="inicio" class="has-text-centered">
-            <h2 class="subtitle">
-                La mejor calidad al mejor precio tu sabes
-            </h2>
-        </article>
+        <button class="button is-success">
+            + Agregar producto
+        </button>
 
-        <article id="nosotros" class="has-text-centered">
-            <h2 class="subtitle">
-                Sobre Nosotros
-            </h2>
-            <p>
-                Somos una tienda de zapatos comprometidos con ofrecer la mejor calidad y el mejor precio. y Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-        </article>
-
-        <section id="productos-destacados" class="has-text-centered">
-            <h2>Productos Destacados</h2>
-            <br>
-            <!-- Solo usamos columns y column para la grilla básica -->
-            <div class="container columns" id="contener-productos">
-
-                <div class="column">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TeoFheP4BGfyLSSe1ZDVhHRqFVjkvhZdLv0Xq0-rEQ&s=10" alt="Adidas">
-                    <h3>Zapatillas adidas superstar</h3>
-                    <p>$79.000</p>
-                    <button onclick="agregarAlCarrito(1)" class="button is-primary">Comprar</button>
-                </div>
-
-                <div class="column">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMpQvM-y-Y0QuJ_7c4rkuydoJJskdULLsOb54RppDvQ&s=10" alt="Nike">
-                    <h3>Zapatillas Nike air max plus</h3>
-                    <p>$80.000</p>
-                    <button onclick="agregarAlCarrito(2)" class="button is-primary">Comprar</button>
-                </div>
-
-                <div class="column">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdKGUozDyIZcmJYHySbA__N4PZWRR_s3rG7kLI0AYHw&s=10" alt="Reebok">
-                    <h3>Zapatillas reebok classic</h3>
-                    <p>$50.000</p>
-                    <button onclick="agregarAlCarrito(3)" class="button is-primary">Comprar</button>
-                </div>
-
+        <div id="contener-productos">
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TeoFheP4BGfyLSSe1ZDVhHRqFVjkvhZdLv0Xq0-rEQ&s=10" alt="Adidas">
+                <h3>Zapatillas adidas superstar</h3>
+                <p>$79.000</p>
+                <p>Stock: 15</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
             </div>
-        </section>
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qgF_HCE-vphyTdD8RVgnm0lkCqIxU1iDC_XKTDoVZQ&s=10" alt="Jordan">
+                <h3>Jordan 4 Retro Black cat</h3>
+                <p>$230.000</p>
+                <p>Stock: 7</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAxfZF_PNCc8jvrugpJEvzxhrkeiFN0FFrJC0U_IYJg&s=10" alt="Jordan">
+                <h3>Jordan 5 Retro Toro Bravo</h3>
+                <p>$180.000</p>
+                <p>Stock: 10</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXsGJ4j1puQWurhFKx_6OvHiSFx-AvgJWUAdd3F8hvyg&s=10" alt="Jordan">
+                <h3>Jordan 11 Retro</h3>
+                <p>$239.000</p>
+                <p>Stock: 6</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMpQvM-y-Y0QuJ_7c4rkuydoJJskdULLsOb54RppDvQ&s=10" alt="Nike">
+                <h3>Zapatillas Nike air max plus</h3>
+                <p>$80.000</p>
+                <p>Stock: 15</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdKGUozDyIZcmJYHySbA__N4PZWRR_s3rG7kLI0AYHw&s=10" alt="Reebok">
+                <h3>Zapatillas reebok classic</h3>
+                <p>$50.000</p>
+                <p>Stock: 20</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+            <div class="caja-producto">
+                <img src="https://media.falabella.com/falabellaCL/50414937_1/w=1200,h=1200,fit=pad" alt="Timberland">
+                <h3>Botín Hombre Cuero Amarillo Impermeable Timberland</h3>
+                <p>$80.000</p>
+                <p>Stock: 15</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+            <div class="caja-producto">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn3Qxi2RPhE-hoKLzP1sXZ_wUcZzl0FMxBjwxlc33d8g&s=10" alt="Adidas">
+                <h3>Zapatillas adidas Campus Verdes</h3>
+                <p>$69.000</p>
+                <p>Stock: 25</p>
+                <button class="button is-warning">Editar</button>
+                <button class="button is-danger">Eliminar</button>
+            </div>
+        </div>
     </section>
-
-    <article id="contacto" class="has-text-centered">
-        <div>
-            <img src="https://scontent-scl3-1.cdninstagram.com/v/t51.82787-19/786453729_18119746490486295_1566345932816138439_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=103&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=X7HgIo--McEQ7kNvwE_GJ9-&_nc_oc=Adrcz5-ImnKf55pD5SXZz4bILpsbyQLLEyBFpXWTQXnpOB1Y6fLXsvImNrIbdAf0-aU&_nc_zt=24&_nc_ht=scontent-scl3-1.cdninstagram.com&_nc_gid=mO2wqaiKCu8biBQ5tDaxpw&_nc_ss=7ba8c&oh=00_AQIHF4Bh__dqAqBKYFzSsFHNDy_PG3DiAfOxDOqhmYAkhA&oe=6A9E9CAB" alt="Logo" width="80">
-        </div>
-        <div>
-            <h2>Contacto</h2>
-            <a href="mailto:mati.jaramillo@duocuc.cl">Tienes dudas o consultas?</a> <br>
-            <a href="tel:+5691234123456">col mi</a> <br>
-            <a href="https://media.istockphoto.com/id/1461385811/es/foto/zapatillas-multicolores-en-el-escaparate-de-la-zapater%C3%ADa.jpg?s=612x612&w=0&k=20&c=tDVPWTSY9ikYLlnORhQTPsKGHSW0nK7bacTHYOVcMfA=">
-                <img src="https://www.designenlassen.de/blog/wp-content/uploads/2024/02/Instagram_icon.png.webp" width="30">
-            </a>
-        </div>
-    </article>
-
-    <footer class="has-text-centered">
+    <footer>
         © 2026 Shoes Shop
     </footer>
 
-    <script src="scripts/script.js"></script>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

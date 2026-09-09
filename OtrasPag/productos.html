@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - Shoes Shop</title>
+    <!-- Correcto: Sale de 'OtrasPag' a buscar 'estilos' -->
     <link rel="stylesheet" href="../estilos/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-    <header id ="header">
-        <h1 class="title">SHOES SHOP</h1>
+    <header id="header">
+        <h1 id="logo" class="title" style="cursor: pointer;">SHOES SHOP</h1>
         <nav>
             <ul class="is-flex">
-                <li><a class="button" href="..index.html">Inicio</a></li>
+                <!-- CORREGIDO: Se agregó '/' después de '..' -->
+                <li><a class="button" href="../index.html">Inicio</a></li>
+                <!-- Correctos: Enlaces entre páginas de la misma carpeta 'OtrasPag' -->
                 <li><a class="button" href="productos.html">Productos</a></li>
                 <li><a class="button" href="carrito.html">Carrito</a></li>
                 <li><a class="button" href="signIn.html">Sing in</a></li>
@@ -24,34 +27,35 @@
         <h2>Todos Nuestros Productos</h2>
         <div id="contener-productos">
             <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TeoFheP4BGfyLSSe1ZDVhHRqFVjkvhZdLv0Xq0-rEQ&s=10" alt="Adidas">
-                    <h3>Zapatillas adidas superstar</h3>
-                    <p>$79.000</p>
-                    <button onclick="agregarAlCarrito(1)" class="button is-primary">Comprar</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6TeoFheP4BGfyLSSe1ZDVhHRqFVjkvhZdLv0Xq0-rEQ&s=10" alt="Adidas">
+                <h3>Zapatillas adidas superstar</h3>
+                <p>$79.000</p>
+                <button onclick="agregarAlCarrito(1)" class="button is-primary">Comprar</button>
             </div>
             <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qgF_HCE-vphyTdD8RVgnm0lkCqIxU1iDC_XKTDoVZQ&s=10" alt="Jordan">
-                    <h3>Jordan 4 Retro Black cat</h3>
-                    <p>$230.000</p>
-                    <button onclick="agregarAlCarrito(2)" class="button is-primary">Comprar</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0qgF_HCE-vphyTdD8RVgnm0lkCqIxU1iDC_XKTDoVZQ&s=10" alt="Jordan">
+                <h3>Jordan 4 Retro Black cat</h3>
+                <p>$230.000</p>
+                <button onclick="agregarAlCarrito(2)" class="button is-primary">Comprar</button>
             </div>
             <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAxfZF_PNCc8jvrugpJEvzxhrkeiFN0FFrJC0U_IYJg&s=10" alt="Jordan">
-                    <h3>Jordan 5 Retro Toro Bravo</h3>
-                    <p>$180.000</p>
-                    <button onclick="agregarAlCarrito(3)" class="button is-primary">Comprar</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZAxfZF_PNCc8jvrugpJEvzxhrkeiFN0FFrJC0U_IYJg&s=10" alt="Jordan">
+                <h3>Jordan 5 Retro Toro Bravo</h3>
+                <p>$180.000</p>
+                <button onclick="agregarAlCarrito(3)" class="button is-primary">Comprar</button>
             </div>
             <div class="caja-producto">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXsGJ4j1puQWurhFKx_6OvHiSFx-AvgJWUAdd3F8hvyg&s=10" alt="Jordan">
-                    <h3>Jordan 11 Retro</h3>
-                    <p>$239.000</p>
-                    <button onclick="agregarAlCarrito(4)" class="button is-primary">Comprar</button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXsGJ4j1puQWurhFKx_6OvHiSFx-AvgJWUAdd3F8hvyg&s=10" alt="Jordan">
+                <h3>Jordan 11 Retro</h3>
+                <p>$239.000</p>
+                <button onclick="agregarAlCarrito(4)" class="button is-primary">Comprar</button>
             </div>
             <div class="caja-producto">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUMpQvM-y-Y0QuJ_7c4rkuydoJJskdULLsOb54RppDvQ&s=10" alt="Nike">
                 <h3>Zapatillas Nike air max plus</h3>
                 <p>$80.000</p>
-                <button onclick="agregarAlCarrito(5)" class="button is-primary">Comprar"</button>
+                <!-- CORREGIDO: Se quitó la comilla sobrante en Comprar -->
+                <button onclick="agregarAlCarrito(5)" class="button is-primary">Comprar</button>
             </div>
             <div class="caja-producto">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdKGUozDyIZcmJYHySbA__N4PZWRR_s3rG7kLI0AYHw&s=10" alt="Reebok">
@@ -74,8 +78,9 @@
         </div>
     </section>
     <footer>
-    © 2026 Shoes Shop
+        © 2026 Shoes Shop
     </footer>
-<script src="..scripts/script.js"></script>
+    <!-- CORREGIDO: Se agregó '/' después de '..' -->
+    <script src="../scripts/script.js"></script>
 </body>
 </html>

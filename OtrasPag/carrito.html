@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carrito - Shoes Shop</title>
-	<link rel="stylesheet" href="..estilos/estilos.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Shoes Shop</title>
+    <!-- Correcto: Sale de 'OtrasPag' a buscar la carpeta 'estilos' -->
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-	<header id ="header">
-        <h1 class="title">SHOES SHOP</h1>
+    <header id="header">
+        <!-- Se agregó id="logo" para la función de redirección admin -->
+        <h1 id="logo" class="title" style="cursor: pointer;">SHOES SHOP</h1>
         <nav>
             <ul class="is-flex">
+                <!-- Correcto: Vuelve a la raíz buscando 'index.html' -->
                 <li><a class="button" href="../index.html">Inicio</a></li>
+                <!-- Correctos: Enlaces a otras páginas dentro de la misma carpeta 'OtrasPag' -->
                 <li><a class="button" href="productos.html">Productos</a></li>
                 <li><a class="button" href="carrito.html">Carrito</a></li>
-				<li><a class="button" href="signIn.html">Sing in</a></li>
+                <li><a class="button" href="signIn.html">Sing in</a></li>
                 <li><a class="button" href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
-	<section id="carrito">
-		<h2 class="subtitle">Carrito</h2>
-		<div id="contenedor-carrito">
+    <section id="carrito">
+        <h2 class="subtitle">Carrito</h2>
+        <div id="contenedor-carrito">
 
-		</div>
-		<div class="resumen-pago">
-			<p id="total-precio" >Total: $0</p>
-			<button class="button is-warning" onclick="vaciarCarrito()">Vaciar Carrito</button>
-			<button class="button is-success">Finalizar</button>
-		</div>
-	</section>
+        </div>
+        <div class="resumen-pago">
+            <p id="total-precio">Total: $0</p>
+            <button class="button is-warning" onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button class="button is-success">Finalizar</button>
+        </div>
+    </section>
+
+    <!-- CORREGIDO: Se agregó la '/' entre '..' y 'scripts' -->
+    <script src="../scripts/script.js"></script>
 </body>
-<script src="..scripts/script.js"></script>
 </html>
