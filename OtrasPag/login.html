@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login - Shoes Shop</title>
-	<link rel="stylesheet" href="../estilos/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Shoes Shop</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-	<header id ="header">
+    <header id="header" class="has-text-centered">
         <h1 class="title">SHOES SHOP</h1>
         <nav>
-            <ul class="is-flex">
+            <ul class="is-flex is-justify-content-center">
                 <li><a class="button" href="../index.html">Inicio</a></li>
                 <li><a class="button" href="productos.html">Productos</a></li>
                 <li><a class="button" href="carrito.html">Carrito</a></li>
@@ -19,14 +19,22 @@
             </ul>
         </nav>
     </header>
-	<form id="login">
-		<h2>Iniciar Sesión</h2>
-		<input type="email" placeholder="ingrese correo">
-		<input type="password" placeholder="Ingrese contraseña">
-		<button class="button">Iniciar</button>
-	</form>
-	<footer>
-    © 2026 Shoes Shop
+    <form id="login" class="has-text-centered my-5">
+        <h2 class="subtitle">Iniciar Sesión</h2>
+        <div>
+            <input type="email" id="correo" placeholder="ingrese correo" required>
+        </div>
+        <br>
+        <div>
+            <input type="password" id="password" placeholder="Ingrese contraseña" required>
+        </div>
+        <br>
+        <button type="submit" class="button is-primary">Iniciar</button>
+        <p id="mensaje" class="mt-3"></p>
+    </form>
+    <footer class="has-text-centered">
+        © 2026 Shoes Shop
     </footer>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
